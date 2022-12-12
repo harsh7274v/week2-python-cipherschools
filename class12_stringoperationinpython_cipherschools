@@ -1,0 +1,40 @@
+a=5
+print("value of a is %d" % (a)) #Not very dynamic and is not used mostly
+print("value of a is {}".format(a))
+print("value of a is {} {}".format(a,2))
+
+a,b,c=1,2,3
+print("a = {}, b = {}, c = {}".format(a,b,c))
+#If  we need correct order
+#Give index given below
+print("a = {2}, b = {1}, c = {0}".format(c,b,a))
+name="Jatin Katyal"
+company="shuttl"
+
+print("Hello {name} Welcome to my Facebook".format(name=name,company=company))
+
+print(f"name = {name}")
+print(f"name = {10/3}")
+
+print("a\nb")
+print(len("a\nb"))
+print(r"a\nb")
+for i in "a\nb":
+    print(i)
+for i in r"a\nb":
+    print(i)
+
+
+#strip function
+a="    harshvardhan   "
+print(a.strip())
+
+#split function
+b="1,2,3,4,5"
+print(b.split(",")) 
+
+#replace
+c="anurag singh"
+print(c.replace("a","z"))
+
+print(c.count("a"))
