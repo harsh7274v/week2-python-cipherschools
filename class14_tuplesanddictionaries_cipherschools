@@ -1,0 +1,112 @@
+
+a=[2,8,4]
+a[0]=400
+a[2]=500
+print(a)
+
+a=(1,4,3,7)
+print(type(a))
+
+def func(*args):
+    print(type(args))
+func(1,2,3,4)
+
+a=5
+b=9
+a,b=b,a
+c=a,b
+print(type(c))
+
+def sum_diff(a,b):
+    s=a+b
+    d=a-b
+    return s,d
+c=sum_diff(10,5)
+print(type(c))
+
+s,d=sum_diff(10,5)
+print(s,d) #unpack iterables
+
+a=1,2,3,4
+print(type(a))
+
+print(list(a))
+print(tuple(a))
+
+print(list(range(0,5)))
+
+and
+
+#Dictionaries
+
+a=dict()
+a={
+    "name":"harsh vardhan",
+    1:"something",
+    (1,2):"Tuple key wat?"
+   
+print(a["name"])
+a={
+    "name":"sweat",
+    "company":"hii",
+    "college":"LPU"
+}
+
+key="marks"
+if key in a:
+    print(a[key])
+else:
+    print("Key doesn't exists")
+
+
+#Some Dict Methods
+#get()
+a={
+    "name":"jatin",
+    "company":"shuttl",
+    "college":"LPU"
+}
+print(a.get(key)) #safe method, doesn't return error instead give None
+print(a.get(key,"Key doesn't exists"))
+
+#keys()
+print(a.keys())
+
+#values()
+print(a.values())
+
+#items()
+for i in a.items():
+    print(i)       
+#HOMEWORK
+Write a simple python program which inputs and stores the data about university students as a list of dictionaries.
+Your final record structure should look like this.
+{
+    {
+        'roll-no':12219201,
+        'name':harsh,
+        'branch':CSE,
+    },
+    {
+        'roll-no':053,
+        'name':raju,
+        'branch':Ece,
+    },
+    {
+        'roll-no':1221875,
+        'name':Sweta,
+        'branch':cse,
+    }
+}
+n=int(input("Enter n: ")) 
+dic={} 
+for i in range(n):
+    d={}
+    record_no=int(input("Enter record no: ")) 
+    roll_no=int(input("Enter roll no: ")) 
+    name=input("Enter name: ") 
+    branch=input("Enter branch: ") 
+    d["roll-no"]=roll_no
+    d["name"]=name
+    d["branch"]=branch
+    dic[record_no]=d
